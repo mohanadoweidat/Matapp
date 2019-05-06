@@ -3,6 +3,9 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Matapp.App">
     <Application.Resources>
-
+        <Style x:Key="CustomButton" TargetType="Button">
+            <Setter Property="CornerRadius" Value="10"/>
+            <Setter Property="TextColor" Value="White"/>
+        </Style>
     </Application.Resources>
 </Application>

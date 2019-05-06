@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CarouselPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:obj="clr-namespace:Matapp"
+             xmlns:forms="clr-namespace:Lottie.Forms;assembly=Lottie.Forms"
+             x:Class="Matapp.Pages.IntroPage">
+
+    <!-- First layer-->
+    <ContentPage>
+        <AbsoluteLayout BackgroundColor="darkred">
+              <StackLayout AbsoluteLayout.LayoutFlags="All"
+                AbsoluteLayout.LayoutBounds="0,0,1,1" Padding="20">
+
+                <Label Text="Välkommen till Matlistan!" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"
+                       TextColor="White" FontSize="27" FontAttributes="Bold" Margin="0,20,0,0"/>
+
+                <Image x:Name="logo" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
+
+
+
+                <Button Style="{StaticResource CustomButton}" Text="Nästa"
+                    HorizontalOptions="FillAndExpand" VerticalOptions="EndAndExpand"
+                        FontAttributes="Bold" TextColor="Black"   BackgroundColor="White" Margin="20,20,20,20"
+                        Clicked="Button_Clicked"/>
+            </StackLayout>
+        </AbsoluteLayout>
+    </ContentPage>
+
+
+    <!--- Choose site-->
+    <!--<ContentPage BackgroundColor="DarkRed">
+        <ScrollView>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                </Grid.RowDefinitions>
+                
+                    <Image x:Name="logo1" HeightRequest="150" WidthRequest="500"  HorizontalOptions="CenterAndExpand" 
+                       VerticalOptions="CenterAndExpand" Grid.Row="0"
+                   />
+              
+                
+
+
+                <Frame CornerRadius="10" BackgroundColor="Transparent" BorderColor="White" Grid.RowSpan="2"
+                    Margin="20,150,20,20" >
+
+
+                    <Grid RowSpacing="10">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                        </Grid.RowDefinitions>
+
+
+                        <BoxView Grid.Row="2" HorizontalOptions="FillAndExpand" 
+                            HeightRequest="1"  />
+
+                        <Label Text="Instruktioner" FontSize="Medium" Grid.Row="2" 
+                            FontAttributes="Bold" VerticalOptions="Center" HorizontalTextAlignment="Center" TextColor="White"/>
+
+                        <BoxView Grid.Row="3" HorizontalOptions="FillAndExpand" HeightRequest="1" 
+                            BackgroundColor="Silver"/>
+
+                        <Grid Grid.Row="4">
+                            <Label x:Name="labila" FontSize="Large" VerticalOptions="CenterAndExpand"
+                                 HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" TextColor="White"/>
+                        </Grid>
+
+                        <Button Text="Komma igång"
+                        HorizontalOptions="FillAndExpand" VerticalOptions="EndAndExpand"
+                        FontAttributes="Bold" BackgroundColor="White" TextColor="Black" Grid.Row="6"
+                        Clicked="Button_Clicked_1"/>
+                    </Grid>
+                </Frame>
+            </Grid>
+        </ScrollView>
+     </ContentPage>-->
+    
+     <!-- Two Icons with buttons-->
+     <ContentPage BackgroundColor="DarkRed">
+        <ScrollView>
+            <StackLayout>
+
+                <Frame BackgroundColor="Transparent" BorderColor="White" CornerRadius="20" Margin="10,10,10,10">
+                    <Label Text="Välj elev eller restaurant:" FontSize="Medium" Margin="5,20,5,5" 
+                            FontAttributes="Bold" VerticalOptions="Center" HorizontalTextAlignment="Center" TextColor="White"/>
+                </Frame>
+               
+                  <Image x:Name="_User" BackgroundColor="Transparent" HeightRequest="200" WidthRequest="300" 
+                  VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"></Image>
+                <Label Text="Elev" FontSize="Medium"  
+                            FontAttributes="Bold" VerticalOptions="Center" HorizontalTextAlignment="Center" TextColor="White"/>
+
+                <Image x:Name="_Admin" BackgroundColor="Transparent" HeightRequest="200" WidthRequest="300" 
+                  VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"></Image>
+                <Label Text="Restaurant(Admin)" FontSize="Medium"  Margin="5,5,5,50"
+                            FontAttributes="Bold" VerticalOptions="Center" HorizontalTextAlignment="Center" TextColor="White"/>
+                
+            </StackLayout>
+         </ScrollView>
+    </ContentPage>
+    
+    
+     <!--Another site sidan-->
+    <!--<ContentPage>
+        
+    </ContentPage>-->
+
+
+</CarouselPage>

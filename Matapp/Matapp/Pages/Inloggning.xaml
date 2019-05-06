@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:obj="clr-namespace:Matapp"
+             xmlns:forms="clr-namespace:Lottie.Forms;assembly=Lottie.Forms"
+             x:Class="Matapp.Pages.Inloggning">
+    
+    
+    <AbsoluteLayout BackgroundColor="DarkRed">
+         <StackLayout AbsoluteLayout.LayoutFlags="All"
+                AbsoluteLayout.LayoutBounds="0,0,1,1" Padding="20" Spacing="12">
+            <Label Text="Inloggning" HorizontalOptions="CenterAndExpand"
+                       TextColor="White" FontSize="30" FontAttributes="Bold"/>
+            <Frame Padding="0" CornerRadius="20" Margin="0,20,0,0" IsClippedToBounds="True">
+                <obj:IEntry Placeholder="Namn" HorizontalOptions="FillAndExpand"
+                                HorizontalTextAlignment="Center" x:Name="username"/>
+            </Frame>
+            <Frame Padding="0" CornerRadius="20" IsClippedToBounds="True">
+                <obj:IEntry Placeholder="Lösenord" HorizontalOptions="FillAndExpand"
+                     HorizontalTextAlignment="Center" x:Name="password" IsPassword="True"/>
+            </Frame>
+            <forms:AnimationView AutoPlay="False" x:Name="an" IsVisible="False"
+                 Loop="True" Animation="loading1.json" HeightRequest="50" WidthRequest="50"/>
+            <Label x:Name="lbl_time" HorizontalOptions="CenterAndExpand"
+                       TextColor="Red" IsVisible="False" HorizontalTextAlignment="Center"/>
+            <Button Style="{StaticResource CustomButton}" Text="Logga in"
+                    HorizontalOptions="FillAndExpand" VerticalOptions="EndAndExpand"
+                        FontAttributes="Bold" Clicked="Button_ClickedAsync" BackgroundColor="White" TextColor="Black"/>
+        </StackLayout>
+     </AbsoluteLayout>
+</ContentPage>
